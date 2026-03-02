@@ -13,8 +13,8 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // allow all endpoints
-                        .allowedOrigins("https://chathiveapp.netlify.app") // frontend origin
+                registry.addMapping("/**")
+                        .allowedOrigins(AppConstants.FRONT_END_BASE_URL)
                         .allowedMethods("*")
                         .allowedHeaders("*");
             }

@@ -2,6 +2,5 @@ package com.substring.chat.config;
 
 public class AppConstants {
 
-    public static final String FRONT_END_BASE_URL = "https://chathiveapp.netlify.app";
-    
+	 public static final String FRONT_END_BASE_URL = System.getenv("FRONT_END_BASE_URL");
 }

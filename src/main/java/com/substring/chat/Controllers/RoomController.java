@@ -13,7 +13,7 @@ import com.substring.chat.entities.Room;
 import com.substring.chat.services.RoomService;
 
 @RestController
-@CrossOrigin(AppConstants.FRONT_END_BASE_URL)
+@CrossOrigin("*")
 @RequestMapping("/api/v1/rooms")
 public class RoomController {
 
@@ -53,7 +53,7 @@ public class RoomController {
         }
 
         List<Message> messages = room.getMessages();
-
+        //pagination
         int start = Math.max(0, messages.size() - (page + 1) * size);
         int end = Math.min(messages.size(), start + size);
 
