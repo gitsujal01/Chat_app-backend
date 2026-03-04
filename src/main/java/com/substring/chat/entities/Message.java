@@ -1,7 +1,6 @@
 package com.substring.chat.entities;
 
 import java.time.Instant;
-
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "messages")
@@ -9,7 +8,7 @@ public class Message {
 
     private String sender;
     private String content;
-    private Instant timestamp;   // ✅ Instant use karo
+    private Instant timestamp;   // ✅ Instant only
 
     public Message() {}
 
@@ -35,11 +34,11 @@ public class Message {
         this.content = content;
     }
 
-    public Instant getTimestamp() {   // ✅ Instant
+    public Instant getTimestamp() {   
         return timestamp;
     }
 
-    public void setTimestamp(Instant timestamp) {  // ✅ Instant
+    public void setTimestamp(Instant timestamp) {  // ✅ Instant only
         this.timestamp = timestamp;
     }
 }

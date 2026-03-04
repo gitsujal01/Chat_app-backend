@@ -2,6 +2,7 @@ package com.substring.chat.Controllers;
 
 import java.time.Instant;   // ✅ ye import add karo
 // import java.time.LocalDateTime; ❌ isko hata do
+import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
@@ -44,7 +45,7 @@ public class ChatController {
         Message message = new Message();
         message.setContent(request.getContent());
         message.setSender(request.getSender());
-        message.setTimestamp(Instant.now()); // ✅ YAHAN change
+        message.setTimestamp(Instant.now());
 
         roomm.getMessages().add(message);
         rr.save(roomm);
